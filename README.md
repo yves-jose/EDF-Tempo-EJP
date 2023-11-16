@@ -1,5 +1,6 @@
 # EDF-Tempo-EJP
 Détection des différentes couleurs Tempo et EJP<br>
+Avec ESP32 sous tasmota en Berry scripting<br>
 Gestion des alertes changement de tarifs pour le contrat "Tempo" et "EJP"<br>
 Les infos sont récupérées sur le site EDF "https://particulier.edf.fr/services/"<br>
 Pour Tempo :<br>
