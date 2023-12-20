@@ -1,3 +1,4 @@
+![WS2812-ESP32-Circuit-Diagram](https://github.com/yves-jose/EDF-Tempo-EJP/assets/35004084/bf91e4a6-82d2-4287-82a5-317d421d2b8b)
 # EDF-Tempo-EJP
 Détection des différentes couleurs Tempo et EJP<br>
 Avec ESP32 sous tasmota en Berry scripting<br>
