@@ -1,4 +1,3 @@
-![WS2812-ESP32-Circuit-Diagram](https://github.com/yves-jose/EDF-Tempo-EJP/assets/35004084/bf91e4a6-82d2-4287-82a5-317d421d2b8b)
 # EDF-Tempo-EJP
 Détection des différentes couleurs Tempo et EJP<br>
 Avec ESP32 sous tasmota en Berry scripting<br>
@@ -19,3 +18,5 @@ reste à faire comparaison date du jour avec les 2 dernières dates fournies<br>
 1700131071 : 1678316400 | 1678834800<br>
 2023-11-16T10:37:51 : 2023-03-08T23:00:00 | 2023-03-14T23:00:00<br>
  Nombre jours restants : 22<br>
+
+![WS2812-ESP32-Circuit-Diagram](https://github.com/yves-jose/EDF-Tempo-EJP/assets/35004084/bf91e4a6-82d2-4287-82a5-317d421d2b8b)
