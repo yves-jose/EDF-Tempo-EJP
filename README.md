@@ -19,4 +19,9 @@ reste à faire comparaison date du jour avec les 2 dernières dates fournies<br>
 2023-11-16T10:37:51 : 2023-03-08T23:00:00 | 2023-03-14T23:00:00<br>
  Nombre jours restants : 22<br>
 
+Le schéma de raccordement des leds WS2812 :
 ![WS2812-ESP32-Circuit-Diagram](https://github.com/yves-jose/EDF-Tempo-EJP/assets/35004084/bf91e4a6-82d2-4287-82a5-317d421d2b8b)
+
+L'affichage sur l'interface Web Ui de tasmota :
+![Capture d’écran_Esp32](https://github.com/yves-jose/EDF-Tempo-EJP/assets/35004084/1ac9d2f0-2b71-4e1c-a93a-49239744b0a7)
+
