@@ -1,0 +1,5 @@
+EJP :
+Rule1 ON Wifi#Connected DO Backlog Br load("ejp.be"); Br load("leds_ejp.be") ENDON
+Rule1 ON mqtt#connected DO Backlog Br load("ejp.be"); Br load("leds_ejp.be") ENDON
+
+Rule1 On
