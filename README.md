@@ -2,13 +2,13 @@
 Détection des différentes couleurs Tempo et EJP<br>
 Avec ESP32 sous tasmota en Berry scripting<br>
 Pré-requis :<br>
-Matériel : 
+Matériel :<br>
  - 1 ESP32-WROOM-32
  - 2 Leds WS2812 (leds addressables)<br>
-Logiciel :
+Logiciel :<br>
  - Flashage de l'ESP32 avec tasmota
  - Avoir accès à internet via wifi
- - 
+<br>
 Gestion des alertes changement de tarifs pour le contrat "Tempo" et "EJP"<br>
 Les infos sont récupérées sur le site EDF "https://particulier.edf.fr/services/"<br>
 Pour Tempo :<br>
