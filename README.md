@@ -11,6 +11,7 @@ Logiciel :<br>
 <br>
 Gestion des alertes changement de tarifs pour le contrat "Tempo" et "EJP"<br>
 Les infos sont récupérées sur le site EDF "https://particulier.edf.fr/services/"<br>
+<br>
 Pour Tempo :<br>
 nbj() : récupère le nombre de jours restants pour les 3 tarifs Bleu, Blanc et Rouge<br>
 {'PARAM_NB_J_BLEU': 224, 'PARAM_NB_J_BLANC': 43, 'PARAM_NB_J_ROUGE': 22}<br>
