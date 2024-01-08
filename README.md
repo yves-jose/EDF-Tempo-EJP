@@ -48,6 +48,11 @@ https://tasmota.github.io/install/
 <br>
 Prendre le .bin correspondant a votre ESP32
 <br>
+Configuration pour la platine 2 relais<br>
+{"NAME":"Wemos Tempo","GPIO":[1,1,1,1,1,1,1,1,0,224,225,1,1,1,1,1,1,1,1,1,1,1,0,1,0,0,0,1,1,1,1,1,1,1,1,1],"FLAG":0,"BASE":1}<br>
+<br>
+![image](https://github.com/yves-jose/EDF-Tempo-EJP/assets/35004084/8dc5221e-2354-4a0b-8182-886d4ae9ccb4)<br>
+<br>
 Uploader les 2 fichiers .be correspondant à votre besoin<br>
 Et créer une "rule" pour demmarrer les scripts, j'ai choisi cette solution pour être sur que la liaison ethernet est opérationnelle.<br>
 pour tempo (tempo.be & leds_tempo.be)<br>
