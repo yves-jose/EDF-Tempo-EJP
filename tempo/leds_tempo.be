@@ -60,7 +60,7 @@ class MyLeds
   def init()
     tempocj1 = 'NON_DEFINI'
     tempocj = 'NON_DEFINI'
-    Vleds = Leds(2, 13)
+    Vleds = Leds(2, 15)
     every_30minutes()
   end
   def every_second()
