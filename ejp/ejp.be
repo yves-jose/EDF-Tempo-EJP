@@ -75,4 +75,4 @@ def every_30minutes()
 end
 d1 = MyTempo()
 tasmota.add_driver(d1)
-tasmota.add_cron("0 */30 * * * *",every_30minutes,"settrigger")
+tasmota.add_cron("0 5,35 * * * *",every_30minutes,"settrigger")
