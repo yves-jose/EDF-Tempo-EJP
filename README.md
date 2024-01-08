@@ -1,4 +1,7 @@
 # EDF-Tempo-EJP
+
+Attention : DEVELOPPEMENT EN COURS
+
 Détection des différentes couleurs Tempo et EJP<br>
 Avec ESP32 sous tasmota en Berry scripting<br>
 Pré-requis :<br>
