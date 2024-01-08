@@ -51,8 +51,7 @@ Prendre le .bin correspondant a votre ESP32
 Configuration pour la platine 2 relais<br>
 {"NAME":"Wemos Tempo","GPIO":[1,1,1,1,1,1,1,1,0,224,225,1,1,1,1,1,1,1,1,1,1,1,0,1,0,0,0,1,1,1,1,1,1,1,1,1],"FLAG":0,"BASE":1}<br>
 <br>
-![config_relais](https://github.com/yves-jose/EDF-Tempo-EJP/assets/35004084/0154f4fb-e74a-4eb6-9cd1-ce5461be2d2f)
-<br>
+![param_relais](https://github.com/yves-jose/EDF-Tempo-EJP/assets/35004084/0176d690-885c-4172-89eb-a12e4911af96)
 <br>
 Uploader les 2 fichiers .be correspondant à votre besoin<br>
 Et créer une "rule" pour demmarrer les scripts, j'ai choisi cette solution pour être sur que la liaison ethernet est opérationnelle.<br>
