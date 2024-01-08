@@ -45,17 +45,18 @@ Installation de Tasmota sur L'ESP32 suivre ce lien :
 
 https://tasmota.github.io/install/
 
+<br>
 Prendre le .bin correspondant a votre ESP32
+<br>
+Uploader les 2 fichiers .be correspondant à votre besoin<br>
+Et créer une "rule" pour demmarrer les scripts, j'ai choisi cette solution pour être sur que la liaison ethernet est opérationnelle.<br>
+pour tempo (tempo.be & leds_tempo.be)<br>
+sous console : Rule1 ON Time#Initialized DO Backlog Br load("tempo.be"); Br load("leds_tempo.be") ENDON<br>
 
-Uploader les 2 fichiers .be correspondant à votre besoin
-Et créer une "rule" pour demmarrer les scripts, j'ai choisi cette solution pour être sur que la liaison ethernet est opérationnelle.
-pour tempo (tempo.be & leds_tempo.be)
-sous console : Rule1 ON Time#Initialized DO Backlog Br load("tempo.be"); Br load("leds_tempo.be") ENDON
-
-pour EJP (ejp.be & leds_ejp.be)
-sous console : Rule1 ON Time#Initialized DO Backlog Br load("ejp.be"); Br load("leds_ejp.be") ENDON
-
-L'affichage sur l'interface Web Ui de tasmota :
+pour EJP (ejp.be & leds_ejp.be)<br>
+sous console : Rule1 ON Time#Initialized DO Backlog Br load("ejp.be"); Br load("leds_ejp.be") ENDON<br>
+<br>
+L'affichage sur l'interface Web Ui de tasmota :<br>
 
 ![Tempo_Esp32](https://github.com/yves-jose/EDF-Tempo-EJP/assets/35004084/b95595db-d62b-4162-81fb-ad4eacb151f0)
 
