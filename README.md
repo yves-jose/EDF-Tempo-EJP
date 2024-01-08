@@ -31,9 +31,15 @@ reste à faire comparaison date du jour avec les 2 dernières dates fournies<br>
 2023-11-16T10:37:51 : 2023-03-08T23:00:00 | 2023-03-14T23:00:00<br>
  Nombre jours restants : 22<br>
 
-Le schéma de raccordement des leds WS2812 :
+Le schéma de raccordement des leds WS2812 et platine 2 relais :
 
-![WS2812-ESP32-Circuit-Diagram](https://github.com/yves-jose/EDF-Tempo-EJP/assets/35004084/bf91e4a6-82d2-4287-82a5-317d421d2b8b)
+![Schema_leds_relais](https://github.com/yves-jose/EDF-Tempo-EJP/assets/35004084/b1175d5a-1297-4329-9e6a-9628e009dc6c)
+
+- Led 1 info demain
+- Led 2 info aujourd'hui
+- Relais 1 Heures Creuses
+- Relais 2 Heures Pleine rouges
+
 
 Installation de Tasmota sur L'ESP32 suivre ce lien :
 
