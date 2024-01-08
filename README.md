@@ -2,12 +2,15 @@
 Détection des différentes couleurs Tempo et EJP<br>
 Avec ESP32 sous tasmota en Berry scripting<br>
 Pré-requis :<br>
+
 Matériel :<br>
  - 1 ESP32-WROOM-32
  - 2 Leds WS2812 (leds addressables)<br>
+ 
 Logiciel :<br>
  - Flashage de l'ESP32 avec tasmota
  - Avoir accès à internet via wifi
+
 <br>
 Gestion des alertes changement de tarifs pour le contrat "Tempo" et "EJP"<br>
 Les infos sont récupérées sur le site EDF "https://particulier.edf.fr/services/"<br>
@@ -32,12 +35,24 @@ Le schéma de raccordement des leds WS2812 :
 
 ![WS2812-ESP32-Circuit-Diagram](https://github.com/yves-jose/EDF-Tempo-EJP/assets/35004084/bf91e4a6-82d2-4287-82a5-317d421d2b8b)
 
-Installtion de Tasmota sur L'ESP32 suivre ce lien :
+Installation de Tasmota sur L'ESP32 suivre ce lien :
 
 https://tasmota.github.io/install/
 
+Prendre le .bin correspondant a votre ESP32
+
+Uploader les 2 fichiers .be correspondant à votre besoin
+Et créer une "rule" pour demmarrer les scripts, j'ai choisi cette solution pour être sur que la liaison ethernet est opérationnelle.
+pour tempo (tempo.be & leds_tempo.be)
+sous console : Rule1 ON Time#Initialized DO Backlog Br load("tempo.be"); Br load("leds_tempo.be") ENDON
+
+pour EJP (ejp.be & leds_ejp.be)
+sous console : Rule1 ON Time#Initialized DO Backlog Br load("ejp.be"); Br load("leds_ejp.be") ENDON
 
 L'affichage sur l'interface Web Ui de tasmota :
 
-![Capture d’écran_Esp32](https://github.com/yves-jose/EDF-Tempo-EJP/assets/35004084/1ac9d2f0-2b71-4e1c-a93a-49239744b0a7)
+![Tempo_Esp32](https://github.com/yves-jose/EDF-Tempo-EJP/assets/35004084/b95595db-d62b-4162-81fb-ad4eacb151f0)
+
+
+
 
