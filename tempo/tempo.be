@@ -39,12 +39,12 @@ class MyTempo
 	"{s} ---- TEMPO -----{m}%s{e}"..
 	"{s}Auhourd\'hui : {m}%s{e}"..
         "{s}Demain : {m}%s{e}"..
-		"{s} Jours Restants : {e}"..
+	"{s} Jours Restants : {e}"..
         "{s}Bleu : {m}%i{e}"..
-		"{s}Blanc : {m}%i{e}"..
-		"{s}Rouge : {m}%i{e}", 
+	"{s}Blanc : {m}%i{e}"..
+	"{s}Rouge : {m}%i{e}", 
         timej, tempocj, tempocj1, nbjbleu, nbjblanc, nbjrouge)
-		tasmota.web_send(msg)
+	tasmota.web_send(msg)
   end
 end
 #- trigger a read every 30 Minutes -#
