@@ -1,6 +1,8 @@
 Tempo :
 
 Rule1 ON Wifi#Connected DO Backlog Br load("tempo.be"); Br load("leds_tempo.be") ENDON
-Rule1 ON mqtt#connected DO Backlog Br load("tempo.be"); Br load("leds_tempo.be") ENDON
+
+
+Rule1 ON Time#Initialized DO Backlog Br load("tempo.be"); Br load("leds_tempo.be") ENDON
 
 Rule1 On
