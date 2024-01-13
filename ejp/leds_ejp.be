@@ -25,7 +25,7 @@ def couleur_leds()
     demain = 0xFF0000 # Rouge 
   end
   if ejpj1  == 'Non EJP'
-    aujourd_hui = 0x00FF00 # Vert
+    demain = 0x00FF00 # Vert
   end
   if ejpj1  == 'Non defini'
     if seconde % 2 == 1
