@@ -1,11 +1,20 @@
 import string
 import json
+import math 
 var datej, timej, date_time
 var h_actuel
-var ejpnbjr
-var ejpj, ejpj1
+var ejpnbjr, lg
+var ejpj='Non defini', ejpj1='Non defini'
+var jour = 1, jour1 = 2 , djour=0 , avdjour = 0
+var every_30minutes
+
 cl = webclient()
 cl.set_useragent("Wget/1.20.3 (linux-gnu)")
+
+def t_ejp()
+  print("Timer EJP")
+  every_30minutes()
+end
 
 def h_epoch(hhmmss)
   return tasmota.strptime(datej .. ' ' .. hhmmss, "%Y-%m-%d %H:%M:%S")['epoch']
@@ -15,18 +24,22 @@ def ejp()
     var adresse3 = "https://particulier.edf.fr/services/rest/referentiel/historicEJPStore?searchType=ejp"
     cl.begin(adresse3)
     var rejp = cl.GET()
-    var sejp = cl.get_string()
-    var lg = 40 + (((size(sejp) - 1173)/49)*2)
-    print("Longeur = " .. size(sejp) .. " - " .. lg)
-    var jour = tasmota.strptime(datej, "%Y-%m-%d")['epoch']
-    var tz = number(tasmota.rtc()['timezone'])*60
-    var jour1 = jour + 86400 
-    var avdjour = number(string.split(string.split(string.split(sejp,",")[lg],":")[1],10)[0])+tz
-    var djour = number(string.split(string.split(string.split(sejp,",")[lg+2],":")[1],10)[0])+tz
-    ejpnbjr = string.split(string.split(sejp,",")[lg+4],":")[1]
-    print(str(jour) .. " : " .. str(avdjour) .. " | " .. str(djour))
-    print(tasmota.time_str(jour) .. " : " .. tasmota.time_str(avdjour) .. " | " .. tasmota.time_str(djour))
-    print(" Nombre jours restants : " .. ejpnbjr)
+	if result1 == 200
+      var sejp = cl.get_string()
+      lg = int(40 + (math.ceil((size(sejp) - 1173.0)/49)*2))
+      print("Longeur = " .. size(sejp) .. " - " .. lg)
+      jour = tasmota.strptime(datej, "%Y-%m-%d")['epoch']
+      var tz = number(tasmota.rtc()['timezone'])*60
+      jour1 = jour + 86400 
+      avdjour = number(string.split(string.split(string.split(sejp,",")[lg],":")[1],10)[0])+tz
+      djour = number(string.split(string.split(string.split(sejp,",")[lg+2],":")[1],10)[0])+tz
+      ejpnbjr = string.split(string.split(sejp,",")[lg+4],":")[1]
+      print(str(jour) .. " : " .. str(avdjour) .. " | " .. str(djour))
+      print(tasmota.time_str(jour) .. " : " .. tasmota.time_str(avdjour) .. " | " .. tasmota.time_str(djour))
+      print(" Nombre jours restants : " .. ejpnbjr)
+	  else
+	    tasmota.set_timer(250000, t_ejp)
+    end
     if jour < djour
        ejpj  = 'Non EJP'
     end
@@ -52,7 +65,7 @@ def ejp()
 end
 
 import webserver # import webserver class
-class MyTempo
+class MyEJP
   #- display sensor value in the web UI -#
   def web_sensor()
     # import string
@@ -73,6 +86,6 @@ def every_30minutes()
     timej = string.split(date_time,'T')[1]
     ejp()
 end
-d1 = MyTempo()
+d1 = MyEJP()
 tasmota.add_driver(d1)
 tasmota.add_cron("0 5,35 * * * *",every_30minutes,"settrigger")
