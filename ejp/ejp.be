@@ -24,7 +24,7 @@ def ejp()
     var adresse3 = "https://particulier.edf.fr/services/rest/referentiel/historicEJPStore?searchType=ejp"
     cl.begin(adresse3)
     var rejp = cl.GET()
-	if result1 == 200
+    if rejp == 200
       var sejp = cl.get_string()
       lg = int(40 + (math.ceil((size(sejp) - 1173.0)/49)*2))
       print("Longeur = " .. size(sejp) .. " - " .. lg)
@@ -37,8 +37,8 @@ def ejp()
       print(str(jour) .. " : " .. str(avdjour) .. " | " .. str(djour))
       print(tasmota.time_str(jour) .. " : " .. tasmota.time_str(avdjour) .. " | " .. tasmota.time_str(djour))
       print(" Nombre jours restants : " .. ejpnbjr)
-	  else
-	    tasmota.set_timer(250000, t_ejp)
+    else
+      tasmota.set_timer(250000, t_ejp)
     end
     if jour < djour
        ejpj  = 'Non EJP'
